@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AttachedPropertiesIssue.MainPage"
+             xmlns:properties="clr-namespace:AttachedPropertiesIssue">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <StackLayout x:Name="StackLayout1">
+            <properties:StackLayoutProperties.StackLayoutCollection>
+                <properties:MyCustomClass ExampleProperty1="StackLayout1 - Prop1"/>
+                <properties:MyCustomClass ExampleProperty1="StackLayout1 - Prop2"/>
+            </properties:StackLayoutProperties.StackLayoutCollection>
+        </StackLayout>
+        <StackLayout x:Name="StackLayout2">
+            <properties:StackLayoutProperties.StackLayoutCollection>
+                <properties:MyCustomClass ExampleProperty1="StackLayout2 - Prop1"/>
+                <properties:MyCustomClass ExampleProperty1="StackLayout2 - Prop2"/>
+            </properties:StackLayoutProperties.StackLayoutCollection>
+        </StackLayout>
+        <Button Text="SEE PROPERTIES"  Clicked="Button_Clicked"/>
+    </StackLayout>
+
+    
+
+</ContentPage>
